@@ -42,6 +42,11 @@ exports.save = (req, res) => {
       "insert into users(NAME,AGE,CITY) values(?,?,?)",
       [name, age, city],
       (err, rows) => {
+
+        //console.log("value "+JSON.stringify(rows))
+        
+       // console.log("value1 "+getId)
+
         connection.release();
         if (!err) {
           res.render("adduser", { msg: "User details added Successfully!!" });

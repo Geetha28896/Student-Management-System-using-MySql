@@ -1,28 +1,100 @@
-<h3>Add New User</h3>
+<!--<h3>Add New User</h3>-->
 {{#if msg}}
 
-<div class="alert">{{msg}}</div>
+  <div class="alert">{{msg}}</div>
 {{/if}}
 
-<form method="post" action="/adduser" autocomplete="false">
-<div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" name="name">
-</div>
+<!--<style>
+  div.columns{ margin-top: 100px; } .button { margin-top: 10px }
 
-<div class="form-group">
-    <label for="age">Age</label>
-    <input type="text" name="age">
-</div>
+</style>
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-5">
+      <form method="post" action="/adduser" autocomplete="false">
 
-<div class="form-group">
-    <label for="city">City</label>
-    <input type="text" name="city">
-</div>
+        
+          <label for="name">Name</label>
+          <input type="text" name="name" /><br>
+        
 
-<div class="form-group">
-   <button type="submit">Save Details</button>
-   <a href="/">View All</a>
-</div>
+        
+          <label for="age">Age</label>
+          <input type="text" name="age" /><br>
+       
 
-</form>
+        
+          <label for="city">City</label>
+          <input type="text" name="city" /><br>
+        
+
+       
+          <button type="submit">Save Details</button>
+          <a href="/">View All</a>
+        
+
+      </form>
+    </div>
+  </div>
+</div>-->
+
+<style>
+        div.columns {
+        margin-top: 100px;
+        }
+    
+        .button {
+        margin-top: 10px
+        }
+    </style>
+    </head>
+    
+    <body>
+    <div class='container'>
+        <div class='columns is-centered'>
+        <div class='column is-5'>
+            <form method="post" action="/adduser" autocomplete="false">
+            <div>
+                <div>
+                <label class='label'
+                    id='str'>Name
+                </label>
+                </div>
+                <input class='input' type='text'
+                name='name' placeholder='Name'
+                for='name'>
+            </div>
+            <div>
+                <div>
+                <label class='label' id='email'>
+                    Age
+                </label>
+                </div>
+                <input class='input' type='text'
+                name='age' placeholder='Number'
+                for='age'>
+            </div>
+             <div>
+                <div>
+                <label class='label'
+                    id='str2'>City
+                </label>
+                </div>
+                <input class='input' type='text'
+                name='city' placeholder='City'
+                for='city'>
+            </div>
+            <div>
+                <button class='button is-info'>
+                Submit
+                </button>
+               <p><a href="/">View All</a></p>
+                {{!-- <p><a href="/"  class="view">View All</a></p> --}}
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    </body>
+    
+    </html>
